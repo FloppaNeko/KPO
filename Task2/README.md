@@ -1,5 +1,22 @@
 Добавим четырех покупателей и четыре автомобиля (две с ручным и две с педальным двигателей)
 
+```csharp
+var customers = new[]
+{
+    new Customer(name: "Ivan", legStrength: 6, handStrength: 4),
+    new Customer(name : "Petr", legStrength : 4, handStrength : 6),
+    new Customer(name : "Sidr", legStrength : 6, handStrength : 6),
+    new Customer(name : "Alexei", legStrength : 4, handStrength : 4),
+};
+```
+
+```csharp
+carStorage.AddCar(pedalCarFactory, new PedalEngineParams(pedalSize: 2));
+carStorage.AddCar(pedalCarFactory, new PedalEngineParams(pedalSize: 3));
+carStorage.AddCar(handCarFactory, EmptyEngineParams.Empty);
+carStorage.AddCar(handCarFactory, EmptyEngineParams.Empty);
+```
+
 Распределим машины вызовом метода `SellCars` и получим результат:
 
 Как видим, все необходимые условия выполняются
