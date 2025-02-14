@@ -10,10 +10,10 @@
 Input the number of the command:
 1: Add an animal
 2: Add an item
-3: Get the total ammount of required food for animals
+3: Get the total ammount of food needed for the animals
 4: Get all the animals in the zoo
 5: Get the kind animals who can be displayed at the contact zoo
-6: Get all the things in the inventory
+6: Get all the items in the inventory
 7: Exit
 1
 Input the number of the species of the animal:
@@ -33,7 +33,7 @@ Tiger Fred (Consumes food: 100; Level of kindness: 1) was successfully admitted 
 
 ## Применение принципов SOLID
 
-Примеры применения приципов SOLID в данном проекте не вполне оченвиды, 
+Примеры применения приципов SOLID в данном проекте не вполне очевиды, 
 так как проект небольшой и не имеет какой-то сложной архитектуры, но тем не менее можно попытаться их выделить:
 
 ### S - Single Responsibility Principle - принцип единственной ответственности
@@ -48,8 +48,8 @@ Tiger Fred (Consumes food: 100; Level of kindness: 1) was successfully admitted 
 
 ### L - Liskov substitution Principle - принцип подстановки Барбары Лисков
 
-Этот принцип нигде не нарушается, к примеру в классе зоопарка в массивы животных и вещей могут быть добавлены объекты
-любого из классов животных и вещей соответсвенно, и никаких проблем это не создаст
+Этот принцип нигде не нарушается, к примеру, в классе зоопарка в массивы животных и вещей могут быть добавлены объекты
+любого из классов животных и вещей соответственно, и никаких проблем это не создаст.
 
 ### I -  Interface Segregation Principle - принцип разделения интерфейсов
 
@@ -58,6 +58,6 @@ Tiger Fred (Consumes food: 100; Level of kindness: 1) was successfully admitted 
 
 ### D - Dependency Inversion Principle - принцип инверсии зависимостей
 
-Инверсия зависимостей применяется в классе зоопарка как для ветеринарной клиники, которая хранится как интерфейс `IVetClinic` (в дальнейшем могут быть созданны и другие классы ветиринарных клиник),
+Инверсия зависимостей применяется в классе зоопарка как для ветеринарной клиники, которая хранится как интерфейс `IVetClinic` (в дальнейшем могут быть созданны и другие классы ветеринарных клиник),
 так и для животных и вещей, которые хранятся абстрактными классами `Animal` и `Thing` , от которых наследуются все другие описывающие их классы.
 
